@@ -114,173 +114,239 @@
   </div>
 </div>
 
+<div>
+  <h2>Mais Procurados</h2>
+</div>
 <!--Cards-->
 <div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4 col-11 m-auto">
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub1.jpg' %})"
-          ></div>
-          <h5 class="card-title">O Programador Web</h5>
-          <p class="card-text">
-            O texto a seguir conta um pouco sobre algumas tarefas na qual um
-            desenvolvedor web é responsável, acompanhe a publicação até o final.
-          </p>
-          <a href="{% url 'pub1' %}" class="btn btn-primary">Leia Mais</a>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{{questao.cover.url}}" class="card-img-top" alt="Imagem 1">
+              <div class="card-body">
+                <h5 class="card-title">O Programador Web</h5>
+                <a href="pub1" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/pub7.png' %}" class="card-img-top" alt="Imagem 2">
+              <div class="card-body">
+                <h5 class="card-title">O Bootstrap</h5>
+                <a href="pub7" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/pub8.png' %}" class="card-img-top" alt="Imagem 3">
+              <div class="card-body">
+                <h5 class="card-title">Back-End e Front-End</h5>
+                <a href="pub8" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/pub10.jpg' %}" class="card-img-top" alt="Imagem 4">
+              <div class="card-body">
+                <h5 class="card-title">DJango</h5>
+                <a href="pub10" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/pub9.png' %}" class="card-img-top" alt="Imagem 5">
+              <div class="card-body">
+                <h5 class="card-title">React Native</h5>
+                <a href="pub9" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub2.png' %})"
-          ></div>
-          <h5 class="card-title">As 6 linguagens</h5>
-          <p class="card-text">
-            O texto a seguir fala um pouco sobre as 6 linguagens de programação
-            que favorecem o desenvolvimento de ambientes seguros.
-          </p>
-          <a href="{% url 'pub2' %}" class="btn btn-primary">Leia Mais</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub3.jpeg' %})"
-          ></div>
-          <h5 class="card-title">Os novos custo do 5G</h5>
-          <p class="card-text">
-            Os brasileiros só terão o 5G puro, o chamado standalone, a partir de
-            julho do próximo ano, começando pelas capitais.
-          </p>
-          <a href="{% url 'pub3' %}" class="btn btn-primary">Leia Mais</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub4.jfif' %})"
-          ></div>
-          <h5 class="card-title">Novo sistema Indiano</h5>
-          <p class="card-text">
-            O texto a seguir mostra que mesmo sem Android e iOS! Índia quer
-            desenvolver seu próprio sistema para smartphones
-          </p>
-          <a href="{% url 'pub4' %}" class="btn btn-primary">Leia Mais</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub5.jpg' %})"
-          ></div>
-          <h5 class="card-title">Machine Learning</h5>
-          <p class="card-text">
-            O texto a seguir fala um pouco sobre o Machine Learning e busca
-            entender um pouco do que é a tecnologia e como é implementar
-            programas que utilizam esse recurso.
-          </p>
-          <a href="{% url 'pub5' %}" class="btn btn-primary">Leia Mais</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub6.png' %})"
-          ></div>
-          <h5 class="card-title">O atraso das criptomoedas</h5>
-          <p class="card-text">
-            O texto a seguir fala um pouco sobre o atraso nos pagametos da
-            criptomoeadas que fez com que muitos desses clientes ficassem bem
-            assustados.
-          </p>
-          <a href="{% url 'pub6' %}" class="btn btn-primary">Leia Mais</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub7.png' %})"
-          ></div>
-          <h5 class="card-title">O Bootstrap</h5>
-          <p class="card-text">
-            O texto a seguir aborda um pouco sobre o conceito do Bootstrap que é
-            uma dos frameworks mais usados na programação web.
-          </p>
-          <a href="{% url 'pub7' %}" class="btn btn-primary">Leia Mais</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub8.png' %})"
-          ></div>
-          <h5 class="card-title">Back-End eFront-End</h5>
-          <p class="card-text">
-            O texto aborda um pouco sobre o conceito de Front-End e Back-End, e
-            quais a principais diferenças entre eles e as princiapis dúvidas em
-            relação á eles.
-          </p>
-          <a href="{% url 'pub8' %}" class="btn btn-primary">Leia Mais</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub9.png' %})"
-          ></div>
-          <h5 class="card-title">Reacte Native</h5>
-          <p class="card-text">
-            O texto comenta o conceito de uma das ferramentas de desevolvimento
-            mobile mais usadas atualmente.
-          </p>
-          <a href="{% url 'pub9' %}" class="btn btn-primary">Leia Mais</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <div
-            class="card-img"
-            style="background-image: url({% static 'img/pub10.jpg' %})"
-          ></div>
-          <h5 class="card-title">DJango</h5>
-          <p class="card-text">
-            O que é Django, para que serve e como usar este framework? <br />
-            Essas e outras perguntas serão respondidas dentro desta publicação
-            que está recheada de novidades.
-          </p>
-          <a href="{% url 'pub10' %}" class="btn btn-primary">Leia Mais</a>
-        </div>
-      </div>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
   </div>
 </div>
+
+<div>
+  <h2 style="margin-left: 20px;">Vistos recente</h2>
+</div>
+
+<div class="container">
+  <div id="carouselExample3" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/e5.png' %}" class="card-img-top" alt="Imagem 1">
+              <div class="card-body">
+                <h5 class="card-title">Como fazer amigos e influenciar pessoas</h5>
+                <h4>R$ 39,90</h4>
+                <a href="pub1" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/e4.png' %}" class="card-img-top" alt="Imagem 2">
+              <div class="card-body">
+                <h5 class="card-title">O Poder do Hábito</h5>
+                <h4>R$ 50,70</h4>
+                <a href="pub7" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/e3.png' %}" class="card-img-top" alt="Imagem 3">
+              <div class="card-body">
+                <h5 class="card-title">Midset</h5>
+                <h4>R$ 45,00</h4>
+                <a href="pub8" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/e2.png' %}" class="card-img-top" alt="Imagem 4">
+              <div class="card-body">
+                <h5 class="card-title">O poder da ação</h5>
+                <h4>R$ 21,90</h4>
+                <a href="pub10" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/e7.png' %}" class="card-img-top" alt="Imagem 5">
+              <div class="card-body">
+                <h5 class="card-title">A Arte da Guerra</h5>
+                <h4>R$ 19,91</h4>
+                <a href="pub9" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/e6.png' %}" class="card-img-top" alt="Imagem 2">
+              <div class="card-body">
+                <h5 class="card-title">Pai Rico, Pai Pobre</h5>
+                <h3>R$ 49,18</h3>
+                <a href="pub7" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>
+
+<div>
+  <h2 style="margin-left: 20px;">Recomendados para você</h2>
+</div>
+
+<div class="container">
+  <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/java2.png' %}" class="card-img-top" alt="Imagem 1">
+              <div class="card-body">
+                <h5 class="card-title">O Programador Web</h5>
+                <a href="pub1" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/java1.png' %}" class="card-img-top" alt="Imagem 2">
+              <div class="card-body">
+                <h5 class="card-title">O Bootstrap</h5>
+                <a href="pub7" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/java3.png' %}" class="card-img-top" alt="Imagem 3">
+              <div class="card-body">
+                <h5 class="card-title">Back-End e Front-End</h5>
+                <a href="pub8" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/java5.png' %}" class="card-img-top" alt="Imagem 4">
+              <div class="card-body">
+                <h5 class="card-title">DJango</h5>
+                <a href="pub10" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/java6.png' %}" class="card-img-top" alt="Imagem 5">
+              <div class="card-body">
+                <h5 class="card-title">React Native</h5>
+                <a href="pub9" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'img/java7.png' %}" class="card-img-top" alt="Imagem 6">
+              <div class="card-body">
+                <h5 class="card-title">React Native2</h5>
+                <a href="pub9" class="btn btn-primary">Ver Publicação</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>
+
+
 {% endblock div %}

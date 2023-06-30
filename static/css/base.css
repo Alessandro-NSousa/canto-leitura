@@ -55,5 +55,14 @@ contact-box p {
 #copy-area .container a:hover {
   color: #3ed1c5;
 }
-.card-img
-{ height: 300px; background-size: contain; background-position: center center; background-repeat: no-repeat; }
+
+.card-img {
+  height: 300px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.carousel-control-button {
+  margin-right: 20px;
+}
