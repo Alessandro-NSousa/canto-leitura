@@ -1,352 +1,413 @@
-{% extends "base.html" %} {% block title %}
-{%  load static %}
+{% extends "base.html" %} {% block title %} {% load static %}
 <title>Mundo Dev</title>
 {% endblock title %} {%block li %}
 <li class="nav-item"><a href="{% url 'sobre' %}" class="nav-link">Sobre</a></li>
 {% endblock li %} {% block div %}
 <!--carousel-->
-
 <div class="container">
-  <div
-    id="carouselExampleIndicators"
-    class="carousel slide"
-    data-bs-ride="carousel"
-  >
-    <div class="carousel-indicators">
-      <button
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="0"
-        class="active"
-        aria-current="true"
-        aria-label="Slide 1"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="1"
-        aria-label="Slide 2"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="2"
-        aria-label="Slide 3"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="3"
-        aria-label="Slide 4"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide-to="4"
-        aria-label="Slide 5"
-      ></button>
+  <div class="row">
+    <section>
+      <br><br>
+    </section>
+    <div class="col-sm-1">
+      <!-- Conteúdo da primeira coluna -->
     </div>
-    <div class="carousel-inner" style="height: 30em">
-      <div
-        class="carousel-item h-100 active"
-        style="background: url({{questao.cover.url}}) center/contain no-repeat"
-      >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>O Programador Web</h5>
-          <a href="pub1" class="btn btn-primary">Ver Publicação</a>
+    <div class="col-sm-10">
+      <!-- Conteúdo da segunda coluna -->
+      <section  style="background: linear-gradient(to right, #13293D 0%, #65A9C6 100%, #F5F8F9 100%); color: var(--laranja);
+      background-color:#F5F8F9;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 1em 0 0.5em 0;
+      border-radius: 100px;">
+        <h2 style="color: #F5F8F9;">Mais procurados</h2>
+      </section>
+      <br>
+      <div class="container">
+        <div
+          id="carouselExample"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e5.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 1"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">titulo a definir1</h5>
+                      <h3>R$ 49,18</h3>
+                      <a href="pub1" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e2.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 2"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">titulo a definir2</h5>
+                      <h3>R$ 50,18</h3>
+                      <a href="pub7" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e5.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 3"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">titulo a definir3</h5>
+                      <h3>R$ 51,18</h3>
+                      <a href="pub8" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e7.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 4"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">titulo a definir 4</h5>
+                      <h3>R$ 52,18</h3>
+                      <a href="pub10" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e4.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 5"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">titulo a definir 5</h5>
+                      <h3>R$ 53,18</h3>
+                      <a href="pub9" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e4.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 5"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">titulo a definir6</h5>
+                      <h3>R$ 54,18</h3>
+                      <a href="pub9" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+          </button>
         </div>
       </div>
-      <div
-        class="carousel-item h-100"
-        style="background: url({% static 'img/pub7.png' %}) center/contain no-repeat"
-      >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>O Bootstrap</h5>
-          <a href="pub7" class="btn btn-primary">Ver Publicação</a>
+      <section  style="background: linear-gradient(to right, #13293D 0%, #65A9C6 100%, #F5F8F9 100%); color: var(--laranja);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 1em 0 0.5em 0;
+      border-radius: 100px;">
+        <h2 style="color: #F5F8F9;" >Novos lançamentos</h2>
+      </section>
+      <br>
+      <div class="container">
+        <div
+          id="carouselExample3"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e5.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 1"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Como fazer amigos e influenciar pessoas
+                      </h5>
+                      <h4>R$ 39,90</h4>
+                      <a href="pub1" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e4.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 2"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">O Poder do Hábito</h5>
+                      <h4>R$ 50,70</h4>
+                      <a href="pub7" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e3.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 3"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Midset</h5>
+                      <h4>R$ 45,00</h4>
+                      <a href="pub8" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e2.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 4"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">O poder da ação</h5>
+                      <h4>R$ 21,90</h4>
+                      <a href="pub10" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e7.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 5"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">A Arte da Guerra</h5>
+                      <h4>R$ 19,91</h4>
+                      <a href="pub9" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e6.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 2"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Pai Rico, Pai Pobre</h5>
+                      <h3>R$ 49,18</h3>
+                      <a href="pub7" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample3"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample3"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+          </button>
         </div>
       </div>
-      <div
-        class="carousel-item h-100"
-        style="background: url({% static 'img/pub8.png' %}) center/contain no-repeat"
-      >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Back-End e Front-End</h5>
-          <a href="pub8" class="btn btn-primary">Ver Publicação</a>
-        </div>
-      </div>
-      <div
-        class="carousel-item h-100"
-        style="background: url({% static 'img/pub10.jpg' %}) center/contain no-repeat"
-      >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>DJango</h5>
-          <a href="pub10" class="btn btn-primary">Ver Publicação</a>
-        </div>
-      </div>
-      <div
-        class="carousel-item h-100"
-        style="background: url({% static 'img/pub9.png' %}) center/contain no-repeat"
-      >
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Reacte Native</h5>
-          <a href="pub9" class="btn btn-primary">Ver Publicação</a>
+
+      <section  style="background: linear-gradient(to right, #13293D 0%, #65A9C6 100%, #F5F8F9 100%); color: var(--laranja);
+      background-color:#F5F8F9;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 1em 0 0.5em 0;
+      border-radius: 100px;">
+        <h2 style="color: #F5F8F9;">recomendaçoes</h2>
+      </section>
+      <br>
+      <div class="container">
+        <div
+          id="carouselExample2"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e7.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 1"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">O Programador Web</h5>
+                      <h4>R$ 21,90</h4>
+                      <a href="pub1" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e4.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 2"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">O Bootstrap</h5>
+                      <h4>R$ 21,90</h4>
+                      <a href="pub7" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e5.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 3"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Back-End e Front-End</h5>
+                      <h4>R$ 21,90</h4>
+                      <a href="pub8" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e2.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 4"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">DJango</h5>
+                      <h4>R$ 21,90</h4>
+                      <a href="pub10" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e3.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 5"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">React Native</h5>
+                      <h4>R$ 21,90</h4>
+                      <a href="pub9" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="{% static 'img/e4.png' %}"
+                      class="card-img-top"
+                      alt="Imagem 6"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">React Native2</h5>
+                      <h4>R$ 21,90</h4>
+                      <a href="pub9" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample2"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample2"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+          </button>
         </div>
       </div>
     </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="col-sm-1">
+      <!-- Conteúdo da segunda coluna -->
+    </div>
   </div>
 </div>
-
-<div>
-  <h2>Mais Procurados</h2>
-</div>
-<!--Cards-->
-<div class="container">
-  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{{questao.cover.url}}" class="card-img-top" alt="Imagem 1">
-              <div class="card-body">
-                <h5 class="card-title">O Programador Web</h5>
-                <a href="pub1" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/pub7.png' %}" class="card-img-top" alt="Imagem 2">
-              <div class="card-body">
-                <h5 class="card-title">O Bootstrap</h5>
-                <a href="pub7" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/pub8.png' %}" class="card-img-top" alt="Imagem 3">
-              <div class="card-body">
-                <h5 class="card-title">Back-End e Front-End</h5>
-                <a href="pub8" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/pub10.jpg' %}" class="card-img-top" alt="Imagem 4">
-              <div class="card-body">
-                <h5 class="card-title">DJango</h5>
-                <a href="pub10" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/pub9.png' %}" class="card-img-top" alt="Imagem 5">
-              <div class="card-body">
-                <h5 class="card-title">React Native</h5>
-                <a href="pub9" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-  </div>
-</div>
-
-<div>
-  <h2 style="margin-left: 20px;">Vistos recente</h2>
-</div>
-
-<div class="container">
-  <div id="carouselExample3" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/e5.png' %}" class="card-img-top" alt="Imagem 1">
-              <div class="card-body">
-                <h5 class="card-title">Como fazer amigos e influenciar pessoas</h5>
-                <h4>R$ 39,90</h4>
-                <a href="pub1" class="btn btn-primary">Comprar</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/e4.png' %}" class="card-img-top" alt="Imagem 2">
-              <div class="card-body">
-                <h5 class="card-title">O Poder do Hábito</h5>
-                <h4>R$ 50,70</h4>
-                <a href="pub7" class="btn btn-primary">Comprar</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/e3.png' %}" class="card-img-top" alt="Imagem 3">
-              <div class="card-body">
-                <h5 class="card-title">Midset</h5>
-                <h4>R$ 45,00</h4>
-                <a href="pub8" class="btn btn-primary">Comprar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/e2.png' %}" class="card-img-top" alt="Imagem 4">
-              <div class="card-body">
-                <h5 class="card-title">O poder da ação</h5>
-                <h4>R$ 21,90</h4>
-                <a href="pub10" class="btn btn-primary">Comprar</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/e7.png' %}" class="card-img-top" alt="Imagem 5">
-              <div class="card-body">
-                <h5 class="card-title">A Arte da Guerra</h5>
-                <h4>R$ 19,91</h4>
-                <a href="pub9" class="btn btn-primary">Comprar</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/e6.png' %}" class="card-img-top" alt="Imagem 2">
-              <div class="card-body">
-                <h5 class="card-title">Pai Rico, Pai Pobre</h5>
-                <h3>R$ 49,18</h3>
-                <a href="pub7" class="btn btn-primary">Comprar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-  </div>
-</div>
-
-<div>
-  <h2 style="margin-left: 20px;">Recomendados para você</h2>
-</div>
-
-<div class="container">
-  <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/java2.png' %}" class="card-img-top" alt="Imagem 1">
-              <div class="card-body">
-                <h5 class="card-title">O Programador Web</h5>
-                <a href="pub1" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/java1.png' %}" class="card-img-top" alt="Imagem 2">
-              <div class="card-body">
-                <h5 class="card-title">O Bootstrap</h5>
-                <a href="pub7" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/java3.png' %}" class="card-img-top" alt="Imagem 3">
-              <div class="card-body">
-                <h5 class="card-title">Back-End e Front-End</h5>
-                <a href="pub8" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/java5.png' %}" class="card-img-top" alt="Imagem 4">
-              <div class="card-body">
-                <h5 class="card-title">DJango</h5>
-                <a href="pub10" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/java6.png' %}" class="card-img-top" alt="Imagem 5">
-              <div class="card-body">
-                <h5 class="card-title">React Native</h5>
-                <a href="pub9" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="{% static 'img/java7.png' %}" class="card-img-top" alt="Imagem 6">
-              <div class="card-body">
-                <h5 class="card-title">React Native2</h5>
-                <a href="pub9" class="btn btn-primary">Ver Publicação</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-  </div>
-</div>
-
 
 {% endblock div %}
